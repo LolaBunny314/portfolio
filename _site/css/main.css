@@ -12,12 +12,31 @@ html {
   font: normal 100%/1.4 "Roboto Slab", serif;
 }
 
+
+/* image and paragraph */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  /*padding: 0 30px;*/
+}
+
+.img-container {
+  padding: 7em;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  color: #F5A219
+}
+
+
 /* footer */
 #footer {
   width: 100%;
   background-color: #011C41;
   margin: 0;
 }
+
 
 .contatti {
   display: inline-block;
@@ -73,14 +92,7 @@ header.smaller nav a {
   box-sizing: border-box;
 }
 
-.img-container {
-  padding: 10em;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 10px;
-  color: #F5A219
-}
+
 
 /*body {
   color: #F2E8C3;
@@ -224,11 +236,4 @@ header.smaller nav a {
   @media all and (max-width: 600px) {
     .container {
       width: 100%;
-    }
-
-    /* image and paragraph */
-    .container {
-      width: 90%;
-      margin: 0 auto;
-      /*padding: 0 30px;*/
     }
