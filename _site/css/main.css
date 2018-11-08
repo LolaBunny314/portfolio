@@ -87,8 +87,8 @@ html {
   opacity: 1;
 }
 
-.img__wrap:hover {
-  transform: scale(1.5) ;
+.img__img:hover {
+  transform: scale(1.5) perspective(1px);
 }
 
 /* image and paragraph */
