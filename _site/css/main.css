@@ -87,6 +87,10 @@ html {
   opacity: 1;
 }
 
+.post-container img:hover {
+  transform: scale(1.5) perspective(1px);
+}
+
 /* image and paragraph */
 .container {
   width: 80%;
