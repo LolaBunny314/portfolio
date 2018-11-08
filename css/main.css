@@ -12,6 +12,41 @@ html {
   font: normal 100%/1.4 "Roboto Slab", serif;
 }
 
+/* posts */
+
+#post-container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 2em;
+  grid-row-gap: 1em;
+  width: 90%;
+  margin: 0 auto;
+ }
+ #post-1 {
+   background-color: red;
+   height: 50vh;
+ }
+
+ #post-2 {
+   background-color: green;
+ }
+
+ #post-3 {
+   background-color: blue;
+ }
+
+ #post-4 {
+   background-color: gray;
+   height: 50vh;
+ }
+
+ #post-5 {
+   background-color: yellow;
+ }
+
+ #post-6 {
+   background-color: black;
+ }
 
 /* image and paragraph */
 .container {
@@ -28,6 +63,7 @@ html {
   border-radius: 10px;
   color: #F5A219
 }
+
 
 
 /* footer */
