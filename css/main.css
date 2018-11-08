@@ -49,20 +49,20 @@ html {
 
 /* header - animation header */
 header.smaller {
-  height: 75px;
+  height: 10vh;
 }
 
 header.smaller h1#logo {
-  width: 150px;
-  height: 75px;
-  line-height: 55px;
-  font-size: 55px;
+  /*width: 150px;
+  height: 75px;*/
+  line-height: 2em;
+  font-size: 5em;
   margin: 0;
   color: white;
 }
 
 header.smaller nav a {
-  line-height: 75px;
+  line-height: 2em;
 }
 
 *,
@@ -113,6 +113,9 @@ a:hover {
 header {
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   position: fixed;
   top: 0;
   left: 0;
@@ -123,13 +126,12 @@ header {
 }
 
 header h1#logo {
-  display: inline-block;
-  line-height: 2.7em;
+  line-height: 2em;
   margin: 0;
   padding: 0em 1em;
   float: left;
   font-family: "Roboto Slab", sans-serif;
-  font-size: 60px;
+  font-size: 3em;
   color: #F5A219;
   font-weight: 400;
   -webkit-transition: all 0.3s;
@@ -140,12 +142,13 @@ header h1#logo {
 }
 
 header nav {
-  display: inline-block;
+  flex-direction: row;
+  align-items: center;
   float: right;
 }
 
 header nav a {
-  line-height: 150px;
+  line-height: 6em;
   padding: 0;
   margin-right: 3em;
   color: #F2E8C3;
