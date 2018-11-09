@@ -99,7 +99,7 @@ body {
 
 
 .img-container {
-  padding: 7em;
+  padding: 7em 0 2em 0;
   display: block;
   text-align: center;
   margin: 0 auto;
