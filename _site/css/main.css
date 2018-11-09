@@ -12,6 +12,10 @@ html {
   font: normal 100%/1.4 "Roboto Slab", serif;
 }
 
+body {
+  width: 100%;
+}
+
 /* posts */
 
 #post-container {
@@ -88,15 +92,11 @@ html {
 }
 
 .img__img:hover {
-  transform: scale(1.5) perspective(1px);
+  /*transform: scale(1.5) perspective(1px);*/
 }
 
 /* image and paragraph */
-.container {
-  width: 80%;
-  margin: 0 auto;
-  /*padding: 0 30px;*/
-}
+
 
 .img-container {
   padding: 7em;
@@ -112,16 +112,194 @@ html {
 /* footer */
 #footer {
   width: 100%;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
   height: 20vh;
   background-color: #011C41;
   margin: 1em 0 0 0;
+  padding: 1em 0 0 0
+
+}
+#footer h1 {
+  display: inline;
+  line-height: 0.3;
+  color:#999;
+  font-size: 1.25em;
 }
 
+.footer-items {
+  width: 90%;
+  margin: 0 auto;
+}
 
-.contatti {
+.social {
+  display: inline;
+
+}
+
+/* email arrow */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.no-container {
+  /* align-items: center;
+  justify-content: center; */
+  height: 100%;
+  display: inline;
+
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 0 0 0 0 ;
+
+}
+
+.the-arrow {
+  width: 64px;
+  transition: all 0.2s;
+}
+.the-arrow.-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+.the-arrow.-left > .shaft {
+  width: 0;
+  background-color: #999;
+}
+.the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
+  width: 0;
+  background-color: #999;
+}
+.the-arrow.-left > .shaft:before {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.the-arrow.-left > .shaft:after {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.the-arrow.-right {
+  top: 3px;
+}
+.the-arrow.-right > .shaft {
+  width: 64px;
+  transition-delay: 0.2s;
+}
+.the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
+  width: 8px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+.the-arrow.-right > .shaft:before {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+.the-arrow.-right > .shaft:after {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+.the-arrow > .shaft {
+  background-color: #999;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+}
+.the-arrow > .shaft:before, .the-arrow > .shaft:after {
+  background-color: #999;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+.the-arrow > .shaft:before {
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+.the-arrow > .shaft:after {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.animated-arrow {
   display: inline-block;
-  margin-left: 3em;
+  color: #999;
+  font-size: 1.25em;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
 }
+.animated-arrow:hover {
+  color: #eaeaea;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft {
+  width: 64px;
+  transition-delay: 0.1s;
+  background-color: #eaeaea;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: #eaeaea;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before {
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+.animated-arrow:hover > .main {
+  -webkit-transform: translateX(80px);
+          transform: translateX(80px);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+  width: 0;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  transition-delay: 0;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.animated-arrow > .main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.animated-arrow > .main > .text {
+  margin: 0 16px 0 0;
+  line-height: 1;
+}
+.animated-arrow > .main > .the-arrow {
+  position: relative;
+}
+
+
 
 
 /* header - animation header */
@@ -130,16 +308,14 @@ header.smaller {
 }
 
 header.smaller h1#logo {
-  /*width: 150px;
-  height: 75px;*/
-  line-height: 2em;
+  /* line-height: 2em; */
   font-size: 5em;
   margin: 0;
   color: white;
 }
 
 header.smaller nav a {
-  line-height: 2em;
+  /* line-height: 2em; */
 }
 
 *,
@@ -149,17 +325,14 @@ header.smaller nav a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.container {
+  width: 90%;
+  margin: 0 auto;
+  /*padding: 0 30px;*/
+}
 
-
-
-/*body {
-  color: #F2E8C3;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.8;
-}*/
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  /*line-height: 1;*/
   font-weight: 100;
   color: #F5A219;
 }
@@ -198,7 +371,7 @@ header {
 header h1#logo {
   line-height: 2em;
   margin: 0;
-  padding: 0em 1em;
+  padding: 0em 0.5em;
   float: left;
   font-family: "Roboto Slab", sans-serif;
   font-size: 3em;
@@ -240,13 +413,13 @@ header.smaller {
 }
 
 header.smaller h1#logo {
-  line-height: 75px;
+  /* line-height: 1.5vh; */
   font-size: 30px;
   color: #F2E8C3;
 }
 
 header.smaller nav a {
-  line-height: 75px;
+  line-height: 1.5vh;
 }
 
 @media all and (max-width: 760px) {
@@ -268,7 +441,7 @@ header.smaller nav a {
   }
 
   header nav a {
-    line-height: 50px;
+    line-height: 1.5vh;
     margin: 0 10px;
   }
 
@@ -278,7 +451,7 @@ header.smaller nav a {
 
   header.smaller h1#logo {
     height: 40px;
-    line-height: 40px;
+    /* line-height: 40px; */
     font-size: 30px;
     width: 100%;
   }
@@ -288,7 +461,7 @@ header.smaller nav a {
   }
 
   header.smaller nav a {
-    line-height: 35px;
+    /* line-height: 40px; */
   }
 
   @media all and (max-width: 600px) {
