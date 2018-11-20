@@ -521,6 +521,7 @@ header.smaller nav a {
       margin: 0 auto;
       width: 90%;
       justify-self: end;
+      margin-bottom: 1em;
     }
 
     #post-container img {
@@ -545,6 +546,7 @@ header.smaller nav a {
       text-align: center;
       width: 90%;
       justify-self: end;
+      margin-bottom: 1em;
     }
 
     #post-container img {
